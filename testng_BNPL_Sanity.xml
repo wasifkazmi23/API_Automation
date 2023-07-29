@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BNPLSanitySuite" configfailurepolicy="continue">
+        <listeners>
+    <listener class-name="org.testng.reporters.EmailableReporter"/>
+  </listeners>
+    <test thread-count="1" name="BNPL Sanity Test Cases">
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+    <classes>
+        <class name="lazypay.transactionFlow.LinkAPITest"/>
+        <class name="lazypay.transactionFlow.EligibilityTests"/>
+        <class name="lazypay.transactionFlow.InitiatePayTests"/>
+        <class name="lazypay.transactionFlow.PayTests"/>
+        <class name="lazypay.transactionFlow.PayWithTokenTests"/>
+        <class name="lazypay.transactionFlow.MerchantRefundTest"/>
+    </classes>
+    </test>
+</suite> <!-- Suite -->

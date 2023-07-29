@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="KYC">
+
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+    </listeners>
+
+    <test thread-count="1" name="Test Aadhaar Xml Approved Case for Android">
+        <classes>
+            <class name="multiDoc.TestAadhaarXmlApprovedCase"/>
+        </classes>
+    </test>
+    <test thread-count="1" name="Test Aadhaar Xml Declined Case for Android">
+        <classes>
+            <class name="multiDoc.TestAadhaarXmlDeclinedCase"/>
+        </classes>
+    </test>
+        <test thread-count="1" name="Test Aadhaar Xml Approved Case for Web">
+        <classes>
+            <class name="multiDoc.TestAadhaarXmlApprovedCaseForWeb"/>
+        </classes>
+    </test>
+    <test thread-count="1" name="Test Aadhaar Xml Declined Case for Web">
+        <classes>
+            <class name="multiDoc.TestAadhaarXmlDeclinedCaseForWeb"/>
+        </classes>
+    </test>
+        <test thread-count="1" name="Test Error codes in Aadhaar XML ">
+        <classes>
+            <class name="multiDoc.TestErrorCodesAadhaarXml"/>
+        </classes>
+    </test>
+  
+
+</suite> 
